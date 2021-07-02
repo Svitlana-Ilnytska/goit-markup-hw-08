@@ -1,48 +1,64 @@
+.section-clients {
+  fill: currentColor;
+}
 
-  .section-clients {
-    fill: currentColor;
-  }
-
-  .company {
+.company {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  // margin-left: 30px;
+  // align-items: center;
+  // margin-bottom: -30px;
+  //@media screen and (min-width: 768px) {
+  // display: flex;
+  // flex-wrap: wrap;
+  //
+  //}
+  &__list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center; 
-      &__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-right: 30px;
-  }
-      &__link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 170px;
-      height: 92px;
-      border: 1px solid var(--color-social-networks);
-      box-sizing: border-box;
-      border-radius: 4px;
-      fill: var(--color-social-networks);
-      padding: 16px 32px;
-    
-      transition-property: border, fill;
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 30px;
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      flex-basis: calc((100% - 60px) / 2);
+      // margin-left: 30px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      flex-basis: calc((100% - 60px) / 3);
+      // margin-left: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 60px) / 6);
+      // margin-left: 30px;
     }
   }
-  
-  .company__list{
-    &:last-child {
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--color-social-networks);
+    box-sizing: border-box;
+    border-radius: 4px;
+    fill: var(--color-social-networks);
+    padding: 16px 32px;
+
+    transition-property: border, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.company__list {
+  &:last-child {
     margin-right: 0;
   }
-  }
-  
-  .company__link {
-      &:hover,
-      &:focus {
+}
+
+.company__link {
+  &:hover,
+  &:focus {
     border: 1px solid var(--color-hover-icons);
     fill: var(--color-hover-icons);
-  }  
   }
-  
+}
