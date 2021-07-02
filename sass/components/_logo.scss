@@ -1,0 +1,28 @@
+.logo {
+    display: block;
+    color: var(--accent-color);
+    font-family: Raleway, sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
+  }
+  
+  .logo-header {
+    margin-top: 24px;
+    margin-right: 93px;
+    margin-bottom: 25px; 
+    .logo__part {
+    color: var(--healines-text-color);
+  }
+  }
+   
+  .logo-footer {
+    margin-bottom: 20px;
+      .logo__part-footer {
+    color: var(--hero-text-color);
+  }
+  }
+  
+  
+  

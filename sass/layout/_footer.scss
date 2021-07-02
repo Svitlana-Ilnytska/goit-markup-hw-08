@@ -1,0 +1,52 @@
+
+.page-footer {
+    background-color: var(--background-hero-color);
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+  
+  .information-contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  .address {
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;  
+  }
+
+   .address-footer {
+    margin-bottom: 9px;
+    color: var(--hero-text-color);
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    text-decoration: none;
+    &__item {
+    margin-bottom: 9px; 
+    }
+    &__link {
+    color: var(--footer-text-color);
+    font-size: 14px;
+    line-height: 1.71;
+    text-decoration: none;
+  }
+  }
+
+  .promotion {
+    display: flex;
+    flex-direction: column;
+    fill: currentColor;
+    &__title {
+    display: inline-block;
+    color: var(--hero-text-color);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+  
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  }
+  
