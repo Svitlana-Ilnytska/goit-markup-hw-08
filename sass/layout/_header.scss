@@ -1,17 +1,23 @@
 .page-header {
     background-color: var(--hero-text-color);
     border-bottom: 1px solid var(--solid-header-color);
+    position: relative;
   }
-  .main-nav {
+
+  .header-navigation {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-nav {
+    display: none;
+    @media screen and (min-width: 768px) { display: flex;
     align-items: center;
     white-space: nowrap; 
      .primary-nav {
     width: 100%;
-  }
-  }
-  
-  .site-nav {
+  } .site-nav {
     display: flex;
     margin: 0 auto;
     align-items: center;
@@ -86,4 +92,119 @@
   .site-nav__icon {
     fill: currentColor;
     margin-right: 10px;
+  }
+  }
+  }
+
+  
+  .menu-button {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 30px;
+    // height: 30px;
+    background-color: transparent;
+    // border-radius: 50%;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+  
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .menu-button {
+    &:hover,
+    &:focus {
+    fill: var(--color-hover-icons);
+  }
+  }
+ 
+    .mobile-menu {
+    position: absolute;
+    background-color: var(--hero-text-color);
+    top: 0;
+    width: 100vw;
+    height: 100vw;
+    
+    
+      &__container {
+        position: relative;
+        padding: 48px 40px;
+
+      }
+  }
+
+  .menu-button-close {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 21px;
+    right: 22px;
+  }
+
+  .mobile-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .mobile-nav-list {
+display: flex;
+}
+
+.mobile-menu-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+// .mobile-menu-contact {
+//   position: absolute;
+//   bottom: 0;
+// }
+
+  .mobile-list__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--healines-text-color);
+  }
+
+  .mobile-contacts__link {
+    text-decoration: none;
+    color: var(--title-text-color);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    
+  }
+
+  .mobile-contacts__phone {
+    text-decoration: none;
+    color: var(--title-text-color);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+  }
+
+  .mobile-media {
+    display: flex;
+
+  }
+
+  .mobile-menu.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  
   }
