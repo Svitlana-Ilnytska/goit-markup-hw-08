@@ -65,6 +65,12 @@ p {
   margin: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   margin: 0 auto;
   width: 100%;
@@ -298,6 +304,16 @@ p {
   .main-nav .primary-nav {
     width: 100%;
   }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .main-nav .tablet-nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .main-nav .site-nav {
     display: flex;
     margin: 0 auto;
@@ -318,6 +334,11 @@ p {
   }
   .main-nav .site-nav__item:last-child {
     margin: 0;
+  }
+  .main-nav .site-nav-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
   }
   .main-nav .site-nav__communication {
     display: block;
@@ -377,6 +398,12 @@ p {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
 .menu-button:hover, .menu-button:focus {
   fill: var(--color-hover-icons);
 }
@@ -386,11 +413,10 @@ p {
   background-color: var(--hero-text-color);
   top: 0;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
 }
 
 .mobile-menu__container {
-  position: relative;
   padding: 48px 40px;
 }
 
@@ -417,6 +443,15 @@ p {
   flex-direction: column;
 }
 
+.mobile-menu-contact {
+  position: absolute;
+  bottom: 0;
+}
+
+.mobile-contacts__item {
+  margin-bottom: 32px;
+}
+
 .mobile-list__link {
   font-style: normal;
   font-weight: 500;
@@ -436,15 +471,29 @@ p {
   font-size: 24px;
   line-height: 1.16;
   letter-spacing: 0.02em;
+  margin-bottom: 64px;
 }
 
 .mobile-contacts__phone {
   text-decoration: none;
-  color: var(--title-text-color);
+  color: var(--color-hover-icons);
   font-style: normal;
   font-weight: 500;
   font-size: 34px;
   line-height: 1.17;
+  margin-bottom: 32px;
+}
+
+.mobile-media__link {
+  text-decoration: none;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
+  margin-left: 10px;
+  color: var(--color-hover-icons);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
 }
 
 .mobile-media {
@@ -459,39 +508,50 @@ p {
 .hero {
   background-color: var(--background-hero-color);
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
-  height: 600px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .hero__sectoin {
-  width: 696px;
+  width: 360px;
   margin: 0 auto;
 }
 
 .overlay {
   background-position: center;
   background-size: cover;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("..//../images/mobile1.jpg");
 }
 
-@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .overlay .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
+@media (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("..//../images/mobile2.jpg");
   }
 }
 
-@media (min-device-pixel-ratio: 2) and (min-width: 768px), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .overlay .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
+@media (min-width: 480px) {
+  .overlay {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("..//../images/tablet1.jpg");
   }
 }
 
-@media (min-device-pixel-ratio: 2) and (min-width: 1200px), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .overlay .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
+@media (min-width: 480px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("..//../images/tablet2.jpg");
+  }
+}
+
+@media (min-width: 768px) {
+  .overlay {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("..//../images/desktop1.jpg");
+  }
+}
+
+@media (min-width: 768px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("..//../images/desktop2.jpg");
   }
 }
 
@@ -500,12 +560,12 @@ p {
   margin-top: 0;
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   display: inline-block;
-  width: 696px;
+  width: 360px;
   text-align: center;
 }
 
@@ -1100,16 +1160,20 @@ p {
   padding-top: 60px;
 }
 
-.information-contact {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+@media (min-width: 768px) {
+  .information-contact__address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }
 
 .address {
   display: flex;
   flex-direction: column;
-  margin-right: 70px;
+  align-items: center;
+  margin-bottom: 60px;
 }
 
 .address-footer {
@@ -1135,6 +1199,8 @@ p {
 .promotion {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
   fill: currentColor;
 }
 
@@ -1151,21 +1217,37 @@ p {
 .footer-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   fill: currentColor;
-  margin-left: 93px;
 }
 
 .footer-form__list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .footer-form__list {
+    width: 450 px;
+  }
 }
 
 .footer-form__field {
   display: flex;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .footer-form__field {
+    width: 450 px;
+  }
 }
 
 .footer-form__submit {
-  width: 358px;
+  margin-bottom: 20px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -1174,6 +1256,12 @@ p {
   background-color: var(--background-hero-color);
   padding-left: 16px;
   color: var(--hero-text-color);
+}
+
+@media (min-width: 768px) {
+  .footer-form__submit {
+    width: 450 px;
+  }
 }
 
 .footer-form__submit::placeholder {

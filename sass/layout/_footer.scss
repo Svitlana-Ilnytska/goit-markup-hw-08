@@ -5,15 +5,27 @@
     padding-top: 60px;
   }
   
-  .information-contact {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-  }
+  @media (min-width: 768px) {
+.information-contact__address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;     
+  // .information-contact {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   align-items: baseline;
+  // 
+}
+}
+
+
   .address {
     display: flex;
     flex-direction: column;
-    margin-right: 70px;  
+    align-items: center;
+    margin-bottom: 60px;
+    // margin-right: 70px;  
   }
 
    .address-footer {
@@ -37,6 +49,8 @@
   .promotion {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
     fill: currentColor;
     &__title {
     display: inline-block;

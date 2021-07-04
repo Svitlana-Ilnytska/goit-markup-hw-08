@@ -38,8 +38,9 @@
               </li>
             </ul>
           </nav>
-
-          <ul class="site-nav">
+       
+        <div class="nav-tablet">
+              <ul class="site-nav-list">
             <li class="site-nav__communication">
               <a href="mailto:info@devstudio.com" class="site-nav__contact">
                 <svg class="site-nav__icon" width="16" height="12">
@@ -58,6 +59,7 @@
             </li>
           </ul>
         </div>
+        </div>
         <button type="button" class="menu-button"  data-menu-open>
           <svg class="menu" width="24" height="16">
             <use href="./images/sprite.svg#icon-menu_24px"></use>
@@ -73,7 +75,7 @@
             </svg>
           </button>
           <div class="mobile-navigation">
-            <div class="mobile-nav-list">
+           
               <ul class="mobile-list">
                 <li class="mobile-list__item">
                   <a href="index.html" class="mobile-list__link current"
@@ -86,7 +88,7 @@
                  <a href="#" class="mobile-list__link">Контакты</a>
                  </li>
               </ul>
-            </div>
+            
           
             <div class="mobile-menu-contact">
               <ul class="mobile-contacts">
@@ -200,7 +202,7 @@
                 />
                 <label for="checkbox" class="modal-form__check-agree">
                   <svg class="modal-form__check-icon" width="16" height="15">
-                    <use href="./images/sprite.svg#icon-check"></use></svg
+                    <use href="./images/sprite.svg#icon-check"></use></svg>
                   >Соглашаюсь с рассылкой и принимаю
                   <a href="#" class="modal-form__checked">Условия договора</a>
                 </label>
@@ -529,9 +531,10 @@
       </ul>
     </section>
 
-    <!-- <footer class="page-footer">
+    <footer class="page-footer">
       <div class="container">
         <div class="information-contact">
+          <div class="information-contact__address">
           <div class="address">
             <a href="index.html " class="logo logo-footer">
               Web<span class="logo__part-footer">Studio</span>
@@ -582,6 +585,7 @@
               </li>
             </ul>
           </div>
+        </div>
 
           <form action="#" class="footer-form">
             <p class="promotion__title">Подпишитесь на рассылку</p>
@@ -599,7 +603,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
