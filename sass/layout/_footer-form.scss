@@ -10,8 +10,8 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    @media (min-width: 768px) {
-      width: 450 px;
+    @media screen and (min-width: 768px) {
+      max-width: 450px;
     }
     // flex-wrap: wrap;
   }
@@ -36,9 +36,9 @@
   padding-left: 16px;
   color: var(--hero-text-color);
   }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     .footer-form__submit {
-  width: 450 px;
+    max-width: 450 px;
   }
   }
   
