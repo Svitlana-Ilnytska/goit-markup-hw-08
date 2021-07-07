@@ -17,12 +17,14 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/main.min.css"/>
   </head>
+
   <body>
     <header class="page-header">
-      <div class="container main-nav">
+      <div class="container header-navigation">
         <a href="index.html" class="logo logo-header">
           Web<span class="logo__part">Studio</span> 
           </a>
+      <div class="main-nav">
         <nav class="primary-nav">
           <ul class="site-nav">
             <li class="site-nav__item"><a href="index.html" class="site-nav__link">Студия</a></li>
@@ -32,8 +34,9 @@
             <li class="site-nav__item"><a href="#" class="site-nav__link">Контакты</a></li>
           </ul>
         </nav>
-
-        <ul class="site-nav">
+      </div>
+      <div class="tablet-nav">
+        <ul class="site-nav-list">
           <li class="site-nav__communication">
             <a href="mailto:info@devstudio.com" class="site-nav__contact">
               <svg class="site-nav__icon" width="16" height="12">
@@ -52,6 +55,70 @@
           </li>
         </ul>
       </div>
+
+      <button type="button" class="menu-button" data-menu-open>
+        <svg class="menu" width="24" height="16">
+          <use href="./images/sprite.svg#icon-menu_24px"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu is-hidden" data-menu>
+      <div class="mobile-menu__container">
+        <button type="button" class="menu-button-close" data-menu-close>
+          <svg class="menu-close" width="18" height="18">
+            <use href="./images/sprite.svg#icon-close_24px"></use>
+          </svg>
+        </button>
+        <div class="mobile-navigation">
+          <ul class="mobile-list">
+            <li class="mobile-list__item">
+              <a href="index.html" class="mobile-list__link current"
+                >Студия</a
+              >
+            </li>
+            <li class="mobile-list__item">
+              <a href="portfolio.html" class="mobile-list__link">Портфолио</a>
+            </li>
+            <li class="mobile-list__item">
+              <a href="#" class="mobile-list__link">Контакты</a>
+            </li>
+          </ul>
+
+          <div class="mobile-menu-contact">
+            <ul class="mobile-contacts">
+              <li class="mobile-contacts__item">
+                <a href="tel:+380961111111" class="mobile-contacts__phone"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-contacts__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobile-contacts__link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="mobile-media">
+              <li class="mobile-media__item">
+                <a href="#" class="mobile-media__link">Instagram</a>
+              </li>
+              <li class="mobile-media__item">
+                <a href="#" class="mobile-media__link">Twitter</a>
+              </li>
+              <li class="mobile-media__item">
+                <a href="#" class="mobile-media__link">Facebook</a>
+              </li>
+              <li class="mobile-media__item">
+                <a href="#" class="mobile-media__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     </header>
 
     <main>
@@ -81,11 +148,33 @@
             <li class="card-feature__list">
               <a href="#" class="card-feature__link">
                 <div class="feature-thumb">
-                  <img
+                  <picture>
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf1desc-1.jpg  1x,
+                        ..//../images/portfolio/pf1desc-2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf1tab-1.jpg  1x,
+                        ..//../images/portfolio/pf1tab-2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf1-1.jpg  1x,
+                        ..//../images/portfolio/pf1-2.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
                     src="./images/portfolio/pf1.jpg"
                     alt="design"
-                    width="370"
-                  />
+                    />
+                  </picture>
                   <div class="feature-thumb__overlay">
                     <p class="feature-thumb__discription">
                       Технокряк это современная площадка распространения
@@ -106,11 +195,33 @@
             <li class="card-feature__list">
               <a href="#" class="card-feature__link">
                 <div class="feature-thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf2desc-1.jpg  1x,
+                        ..//../images/portfolio/pf2desc-2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf2tab-1.jpg  1x,
+                        ..//../images/portfolio/pf2tab-2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf2-1.jpg  1x,
+                        ..//../images/portfolio/pf2-2.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
                   <img
                     src="./images/portfolio/pf2.jpg"
                     alt="design picture"
-                    width="370"
                   />
+                  </picture>
                   <div class="feature-thumb__overlay">
                     <p class="feature-thumb__discription">
                       Технокряк это современная площадка распространения
@@ -130,11 +241,33 @@
             <li class="card-feature__list">
               <a href="#" class="card-feature__link">
                 <div class="feature-thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf3desc-1.jpg  1x,
+                        ..//../images/portfolio/pf3desc-2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf3tab-1.jpg  1x,
+                        ..//../images/portfolio/pf3tab-2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf3-1.jpg  1x,
+                        ..//../images/portfolio/pf3-2.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
                   <img
                     src="./images/portfolio/pf3.jpg"
                     alt="precentation"
-                    width="370"
                   />
+                  </picture>
                   <div class="feature-thumb__overlay">
                     <p class="feature-thumb__discription">
                       Технокряк это современная площадка распространения
@@ -154,11 +287,33 @@
             <li class="card-feature__list">
               <a href="#" class="card-feature__link">
                 <div class="feature-thumb">
-                  <img
-                    src="./images/portfolio/pf4.jpg"
-                    alt="headphone"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf4desc-1.jpg  1x,
+                        ..//../images/portfolio/pf4desc-2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf4tab-1.jpg  1x,
+                        ..//../images/portfolio/pf4tab-2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf4-1.jpg  1x,
+                        ..//../images/portfolio/pf4-2.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                      <img
+                     src="./images/portfolio/pf4.jpg"
+                      alt="headphone"
+                      />
+                  </picture>
                   <div class="feature-thumb__overlay">
                     <p class="feature-thumb__discription">
                       Технокряк это современная площадка распространения
@@ -178,7 +333,30 @@
             <li class="card-feature__list">
               <a href="#" class="card-feature__link">
                 <div class="feature-thumb">
-              <img src="./images/portfolio/pf5.jpg" alt="boxes" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf5desc-1.jpg  1x,
+                        ..//../images/portfolio/pf5desc-2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf5tab-1.jpg  1x,
+                        ..//../images/portfolio/pf5tab-2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf5-1.jpg  1x,
+                        ..//../images/portfolio/pf5-2.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/portfolio/pf5.jpg" alt="boxes" />
+                  </picture>
               <div class="feature-thumb__overlay">
                 <p class="feature-thumb__discription">
                   Технокряк это современная площадка распространения
@@ -198,11 +376,33 @@
             <li class="card-feature__list">
               <a href="#" class="card-feature__link">
                 <div class="feature-thumb">
-              <img
-                src="./images/portfolio/pf6.jpg"
-                alt="computer"
-                width="370"
-              />
+                  <picture>
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf6desc-1.jpg  1x,
+                        ..//../images/portfolio/pf6desc-2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf6tab-1.jpg  1x,
+                        ..//../images/portfolio/pf6tab-2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf6-1.jpg  1x,
+                        ..//../images/portfolio/pf6-2.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                    src="./images/portfolio/pf6.jpg"
+                    alt="computer"
+                    />
+                  </picture>
               <div class="feature-thumb__overlay">
                 <p class="feature-thumb__discription">
                   Технокряк это современная площадка распространения
@@ -222,11 +422,33 @@
             <li class="card-feature__list">
               <a href="#" class="card-feature__link">
                 <div class="feature-thumb">
-              <img
-                src="./images/portfolio/pf7.jpg"
-                alt="open book"
-                width="370"
-              />
+                  <picture>
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf7desc-1.jpg  1x,
+                        ..//../images/portfolio/pf7desc-2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf7tab-1.jpg  1x,
+                        ..//../images/portfolio/pf7tab-2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf7-1.jpg  1x,
+                        ..//../images/portfolio/pf7-2.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                    src="./images/portfolio/pf7.jpg"
+                     alt="open book"
+                    />
+                  </picture>
               <div class="feature-thumb__overlay">
                 <p class="feature-thumb__discription">
                   Технокряк это современная площадка распространения
@@ -246,11 +468,33 @@
             <li class="card-feature__list">
               <a href="#" class="card-feature__link">
                 <div class="feature-thumb">
-              <img
-                src="./images/portfolio/pf8.jpg"
-                alt="some tag"
-                width="370"
-              />
+                  <picture>
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf8desc-1.jpg  1x,
+                        ..//../images/portfolio/pf8desc-2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf8tab-1.jpg  1x,
+                        ..//../images/portfolio/pf8tab-2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf8-1.jpg  1x,
+                        ..//../images/portfolio/pf8-2.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                    src="./images/portfolio/pf8.jpg"
+                    alt="some tag"
+                    />
+                  </picture>
               <div class="feature-thumb__overlay">
                 <p class="feature-thumb__discription">
                   Технокряк это современная площадка распространения
@@ -270,11 +514,33 @@
             <li class="card-feature__list">
               <a href="#" class="card-feature__link">
                 <div class="feature-thumb">
-              <img
-                src="./images/portfolio/pf9.jpg"
-                alt="texting message"
-                width="370"
-              />
+                  <picture>
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf9desc-1.jpg  1x,
+                        ..//../images/portfolio/pf9desc-2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf9tab-1.jpg  1x,
+                        ..//../images/portfolio/pf9tab-2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ..//../images/portfolio/pf9-1.jpg  1x,
+                        ..//../images/portfolio/pf9-2.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                    src="./images/portfolio/pf9.jpg"
+                    alt="texting message"
+                    />
+                  </picture>
               <div class="feature-thumb__overlay">
                 <p class="feature-thumb__discription">
                   Технокряк это современная площадка распространения
