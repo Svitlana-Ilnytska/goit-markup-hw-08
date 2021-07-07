@@ -324,6 +324,12 @@ img {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 480px) {
+  .tablet-nav .site-nav-list {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .tablet-nav .site-nav-list {
     display: none;
@@ -399,7 +405,6 @@ img {
 }
 
 .menu-button {
-  position: absolute;
   top: 22px;
   right: 22px;
   display: flex;
@@ -524,15 +529,42 @@ img {
 .hero {
   background-color: var(--background-hero-color);
   text-align: center;
-  padding-top: 118px;
-  padding-bottom: 118px;
+  padding: 118px 0;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .hero {
+    max-width: 480px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .hero {
+    max-width: 768px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    height: 600px;
+    padding: 200px 0;
+  }
 }
 
 .hero__sectoin {
   width: 360px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__sectoin {
+    width: 696px;
+  }
 }
 
 .overlay {
@@ -581,8 +613,21 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   display: inline-block;
-  width: 360px;
   text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+  .hero-title {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .backdrop {

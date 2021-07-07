@@ -45,6 +45,9 @@
 .tablet-nav {
 
   .site-nav-list {
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
     @media screen and (min-width: 480px) and (max-width: 768px) {
       display: none;
     }
@@ -117,7 +120,7 @@
 }
 
 .menu-button {
-  position: absolute;
+  // position: absolute;
   top: 22px;
   right: 22px;
   display: flex;
